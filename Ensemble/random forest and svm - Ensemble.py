@@ -127,20 +127,11 @@ newdf_test['label'] = newlabeldf_test
 #print(newdf['label'].value_counts())
 
 to_drop_DoS = [0,1]
-to_drop_Probe = [0,2]
-to_drop_R2L = [0,3]
-to_drop_U2R = [0,4]
 
 DoS_df=newdf[newdf['label'].isin(to_drop_DoS)];
-Probe_df=newdf[newdf['label'].isin(to_drop_Probe)];
-R2L_df=newdf[newdf['label'].isin(to_drop_R2L)];
-U2R_df=newdf[newdf['label'].isin(to_drop_U2R)];
 
 #test
 DoS_df_test=newdf_test[newdf_test['label'].isin(to_drop_DoS)];
-Probe_df_test=newdf_test[newdf_test['label'].isin(to_drop_Probe)];
-R2L_df_test=newdf_test[newdf_test['label'].isin(to_drop_R2L)];
-U2R_df_test=newdf_test[newdf_test['label'].isin(to_drop_U2R)];
 
 DoS_df = DoS_df.sample(7000)
 DoS_df_test = DoS_df_test.sample(3000) #################################Sample
